@@ -12,11 +12,21 @@ library(shiny)
 # Define server logic required to draw a histogram
 function(input, output, session) {
 
-#Connect to database and read table
-  reactiveValues({
-    
-  })
+#Action button submission
+  observeEvent(input$Submit,{
+               record = data.frame("DODID" = input$DODID,
+                               "Name" = input$Name,
+                               "Age" = input$Age,
+                               "MOS" = input$MOS,
+                               "HT" = input$Height,
+                               "WT" = input$Weight,
+                               "Q1" = input$Q1,
+                               "Q2" = input$Q2,
+                               "Q3" = input$Q3,
+                               "Q4" = input$Q4,
+                               "Q5" = input$Q5,
+                               "Q6" = input$Q6,
+                               "Q7" = input$Q7,
+                               "Q8" = input$Q8)})
   
-    output$Movies <- renderDataTable(rv$movies)
-
 }

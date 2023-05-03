@@ -7,7 +7,7 @@ mydb <- dbConnect(RSQLite::SQLite(), "test.sqlite")
 dbDisconnect(mydb)  
 
 #This is how you can write a table from a dataframe to a SQL Table
-mydb <- dbConnect(RSQLite::SQLite(), "test.sqlite")
+mydb <- dbConnect(RSQLite::SQLite(), "https://github.com/rslasater82/MORS_23/blob/main/test.sqlite")
 dbWriteTable(mydb, "mtcars", mtcars)
 dbWriteTable(mydb, "iris", iris)
 dbListTables(mydb)
