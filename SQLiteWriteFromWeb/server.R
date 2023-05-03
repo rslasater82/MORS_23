@@ -27,6 +27,8 @@ function(input, output, session) {
                                "Q5" = input$Q5,
                                "Q6" = input$Q6,
                                "Q7" = input$Q7,
-                               "Q8" = input$Q8)})
+                               "Q8" = input$Q8)
+               
+               })
   
 }
