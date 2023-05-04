@@ -1,11 +1,10 @@
-#
-# This is the server logic of a Shiny web application. You can run the
-# application by clicking 'Run App' above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
+#Load googlesheets package
+library(googlesheets4)
+#Authorize access to googlesheet
+gs4_auth(cache = ".secrets", email = "rslasater82@gmail.com")
+
+#Connect to google sheet
+sheet_id <- "https://docs.google.com/spreadsheets/d/1-RUgXisoc8anA2kSJ2JNoUk9mtCRWModMyvvEdNWOU8/edit#gid=0"
 
 library(shiny)
 
@@ -28,7 +27,6 @@ function(input, output, session) {
                                "Q6" = input$Q6,
                                "Q7" = input$Q7,
                                "Q8" = input$Q8)
-               
+               sheet_append(sheet_id, record)
                })
-  
 }

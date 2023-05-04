@@ -1,8 +1,8 @@
 #This is the UI portion of the survey application
 
 library(shiny)
+#Load googlesheets package
 
-#Declare all of the questions outside of the UI and Server files
 
 # Define UI for application that draws a histogram
 fluidPage(
@@ -89,7 +89,6 @@ fluidPage(
                     max = 7,
                     value = 4),
         actionButton("Submit", "Submit Response")
-        
     )
 )
 

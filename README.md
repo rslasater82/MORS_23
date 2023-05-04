@@ -5,12 +5,13 @@ This project is attempting to solve the problem of getting adhoc data from outsi
 
 ## Method
 
-Step 1: Create DB in SQLite
-Step 2: Create Shiny app to write data to DB
-Step 3: Connect excel document to read database
-Step 4: Connect Sharepoint to external excel document
+Step 1: Create in Google Sheets file
+Step 2: Create Shiny app to write data to the Google Sheets
+Step 3: Use power automate to pull data from google sheet into a Sharepoint list
 
-## Step 1: Create DB in SQLite
-There are a number of way to do this. I created the DB using DBI and RSQLite packages. The R document "SQLiteDiscover.R" has the code that I used to initialize the database.
+## Step 1: Create Google Sheets file
+Ideally, this would be done using an instance of the Army Google platform. This would provide an IL4 data environment. However, I was unable to get an account setup, so instead I am using a public google account. Using 
+
 
 ## Step 2: Create Shiny app to write to DB
+Ran into a problem that SQLite is meant to be local, not saved in the cloud. The better solution is to use google sheets.
