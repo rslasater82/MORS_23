@@ -1,0 +1,13 @@
+name: GoogleSheet
+title: GoogleSheet
+username:
+account: lasaterwestpoint
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9115411
+bundleId: 7222114
+url: https://lasaterwestpoint.shinyapps.io/GoogleSheet/
+when: 1684190759.5568
+lastSyncTime: 1684190759.55682
+asMultiple: FALSE
+asStatic: FALSE

@@ -13,12 +13,14 @@ function(input, output, session) {
 
 #Action button submission
   observeEvent(input$Submit,{
+    
                record = data.frame("DODID" = input$DODID,
                                "Name" = input$Name,
                                "Age" = input$Age,
                                "MOS" = input$MOS,
                                "HT" = input$Height,
                                "WT" = input$Weight,
+                               "Company" = input$Company,
                                "Q1" = input$Q1,
                                "Q2" = input$Q2,
                                "Q3" = input$Q3,
@@ -28,5 +30,7 @@ function(input, output, session) {
                                "Q7" = input$Q7,
                                "Q8" = input$Q8)
                sheet_append(sheet_id, record)
+               shinyjs::disable(id = "Submit")
+               shinyjs::show(id = "text1")
                })
 }

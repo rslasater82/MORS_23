@@ -1,11 +1,13 @@
 #This is the UI portion of the survey application
 
 library(shiny)
+library(shinyjs)
 #Load googlesheets package
 
 
 # Define UI for application that draws a histogram
 fluidPage(
+  useShinyjs(),
 
     # Application title
     titlePanel("Shiny Form Example"),
@@ -19,6 +21,13 @@ fluidPage(
         textInput(
           "Name",
           "Enter your name:"
+        ),
+        selectizeInput(
+            "Company",
+            "Select your Company: ",
+            c("A",
+            "B",
+            "C")
         ),
         numericInput(
           "Age",
@@ -88,7 +97,8 @@ fluidPage(
                     min = 1,
                     max = 7,
                     value = 4),
-        actionButton("Submit", "Submit Response")
+        actionButton("Submit", "Submit Response"),
+        shinyjs::hidden(p(id= "text1", "Thank you for your submission!"))
     )
 )
 
